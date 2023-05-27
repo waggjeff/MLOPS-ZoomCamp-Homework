@@ -76,9 +76,10 @@ Tip 2: don't modify the hyperparameters of the model to make sure that the train
 
 What is the value of the `max_depth` parameter:
 
-* 4
-* 6
-* 8
+```
+rf = RandomForestRegressor(max_depth=10, random_state=0)
+```
+
 * 10
 
 
@@ -95,6 +96,7 @@ You should keep the tracking server running to work on the next three exercises 
 
 ```
 mlflow ui --backend-store-uri sqlite:///mlflow.db
+python train_wmlflow.py 
 ```
 
 
@@ -116,11 +118,13 @@ The idea is to just log the information that you need to answer the question bel
 
 What's the best validation RMSE that you got?
 
-* 1.85
-* 2.15
-* 2.45
-* 2.85
 
+* 2.45
+
+
+```
+python hpo.py 
+```
 
 ## Q5. Promote the best model to the model registry
 
