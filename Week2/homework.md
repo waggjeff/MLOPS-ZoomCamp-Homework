@@ -141,20 +141,17 @@ Tips for MLflow:
 
 What is the test RMSE of the best model?
 
-* 1.885
 * 2.185
-* 2.555
-* 2.955
 
+```
+python register_model.py 
+```
 
 ## Q6. Model metadata
 
 Now explore your best model in the model registry using UI. What information does the model registry contain about each model?
 
 * Version number
-* Source experiment
-* Model signature
-* All the above answers are correct
 
 
 ## Submit the results
