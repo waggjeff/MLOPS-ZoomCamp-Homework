@@ -51,11 +51,15 @@ View the results in the UI.
 
 What’s the final RMSE to five decimal places?
 
-- 6.67433
 - 5.19931
-- 8.89443
-- 9.12250
 
+```
+python 3.4/orchestrate_jfw.py 
+
+def main_flow(
+    train_path: str = "./data/green_tripdata_2023-01.parquet",
+    val_path: str = "./data/green_tripdata_2023-02.parquet",
+```
 
 ## Q4. RMSE (Markdown Artifact)
 
@@ -67,11 +71,15 @@ Create a deployment and run it.
 
 What’s the RMSE in the artifact to two decimal places ?
 
-- 9.71
-- 12.02
-- 15.33
 - 5.37
 
+```
+python 3.4/orchestrate_jfw.py
+
+def main_flow(
+    train_path: str = "./data/green_tripdata_2023-02.parquet",
+    val_path: str = "./data/green_tripdata_2023-03.parquet",
+```
 
 ## Q5. Emails
 
@@ -108,11 +116,7 @@ Test the notification functionality by running a deployment.
 
 What is the name of the pre-built prefect-email task function?
 
-- `send_email_message`
 - `email_send_message`
-- `send_email`
-- `send_message`
-
 
 
 ## Q6. Prefect Cloud
@@ -133,10 +137,8 @@ make sure you have a worker active.
 
 What is the name of the second step in the Automation creation process?
 
-- Details
-- Trigger
 - Actions
-- The end
+
 
 
 ## Submit the results
