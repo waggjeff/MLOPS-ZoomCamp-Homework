@@ -16,9 +16,11 @@ What's the standard deviation of the predicted duration for this dataset?
 
 * 5.28
 * 10.28
-* 15.28
-* 20.28
 
+```
+mean_squared_error(df_result['actual_duration'], y_pred, squared=False)
+7.786409085078911
+```
 
 ## Q2. Preparing the output
 
@@ -45,10 +47,23 @@ df_result.to_parquet(
 
 What's the size of the output file?
 
-* 28M
-* 38M
-* 48M
 * 58M
+
+```
+df_out = df_result[['ride_id','predicted_duration']]
+df_out.to_parquet(
+    'duration_results',
+    engine='pyarrow',
+    compression=None,
+    index=False
+)
+```
+
+```
+(base) jwagg-lt1:Deployment j.wagg$ du -h  duration_results 
+ 57M	duration_results
+```
+
 
 __Note:__ Make sure you use the snippet above for saving the file. It should contain only these two columns. For this question, don't change the
 dtypes of the columns and use pyarrow, not fastparquet. 
@@ -60,6 +75,9 @@ Now let's turn the notebook into a script.
 
 Which command you need to execute for that?
 
+```
+jupyter nbconvert --to script score.ipynb
+```
 
 ## Q4. Virtual environment
 
@@ -74,11 +92,12 @@ dependencies we use for the virtual env.
 
 What's the first hash for the Scikit-Learn dependency?
 
+"sha256:08ef968f6b72033c16c479c966bf37ccd49b06ea91b765e1cc27afefe723920b"
 
 ## Q5. Parametrize the script
 
 Let's now make the script configurable via CLI. We'll create two 
-parameters: year and month.
+parameters: year and month2
 
 Run the script for March 2022. 
 
