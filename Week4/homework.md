@@ -15,11 +15,10 @@ Run this notebook for the February 2022 data.
 What's the standard deviation of the predicted duration for this dataset?
 
 * 5.28
-* 10.28
 
 ```
-mean_squared_error(df_result['actual_duration'], y_pred, squared=False)
-7.786409085078911
+print("Mean predicted duration:",df_result['predicted_duration'].mean()," +/- ",df_result['predicted_duration'].std())
+Mean predicted duration: 12.513422116701408  +/-  5.281404481465004
 ```
 
 ## Q2. Preparing the output
