@@ -103,10 +103,7 @@ Run the script for March 2022.
 
 What's the mean predicted duration? 
 
-* 7.76
 * 12.76
-* 17.76
-* 22.76
 
 Hint: just add a print statement to your script.
 
@@ -148,10 +145,7 @@ Now run the script with docker. What's the mean predicted duration
 for April 2022? 
 
 
-* 7.92
 * 12.83
-* 17.92
-* 22.83
 
 
 ## Bonus: upload the result to the cloud (Not graded)
