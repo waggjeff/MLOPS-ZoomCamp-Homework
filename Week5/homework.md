@@ -62,11 +62,7 @@ Let’s start monitoring. Run expanded monitoring for a new batch of data (March
 
 What is the maximum value of metric `quantile = 0.5` on th `"fare_amount"` column during March 2023 (calculated daily)?
 
-* 10
 * 12.5
-* 14
-* 14.8
-
 
 ## Q5. Dashboard
 
