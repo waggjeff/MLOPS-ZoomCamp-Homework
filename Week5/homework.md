@@ -29,7 +29,20 @@ Hint: explore evidently metric `ColumnQuantileMetric` (from `evidently.metrics i
 
 What metric did you choose?
 
+```
+DatasetCorrelationsMetric
+```
 
+```
+report = Report(metrics=[
+    ColumnDriftMetric(column_name='prediction'),
+    DatasetDriftMetric(),
+    DatasetMissingValuesMetric(),
+    DatasetCorrelationsMetric(),
+    ColumnQuantileMetric(column_name="fare_amount", quantile=0.5)
+]
+)
+```
 
 ## Q3. Prefect flow 
 
