@@ -10,10 +10,15 @@ Start with `baseline_model_nyc_taxi_data.ipynb`. Download the March 2023 Green T
 
 What is the shape of the downloaded data? How many rows are there?
 
-* 85371
+
 * 78537
-* 62495
-* 54396
+
+```
+mar_data = pd.read_parquet('data/green_tripdata_2023-03.parquet')
+mar_data.describe()
+mar_data.shape
+(72044, 20)
+```
 
 
 ## Q2. Metric
