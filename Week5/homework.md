@@ -52,9 +52,6 @@ Hint: use `evidently_metrics_calculation.py` script as a starting point to imple
 
 What is the correct way of doing that?
 
-* `@task(retries_num=2, retry_seconds=5, task_name="calculate metrics")`
-* `@task(retries_num=2, retry_delay_seconds=5, name="calculate metrics")`
-* `@task(retries=2, retry_seconds=5, task_name="calculate metrics")`
 * `@task(retries=2, retry_delay_seconds=5, name="calculate metrics")`
 
 
